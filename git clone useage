@@ -1,0 +1,14 @@
+1.如何从github上clone带有子模块的项目(即包含.gitmodules)
+
+With version 1.9 of Git and later, you can even download the submodules simultaneously:
+git clone --recursive -j8 git://github.com/foo/bar.git
+cd bar
+
+With version 1.6.5 of Git and later, you can use:
+git clone --recursive git://github.com/foo/bar.git
+cd bar
+
+For already cloned repos, or older Git versions, just use:
+git clone git://github.com/foo/bar.git
+cd bar
+git submodule update --init --recursive
